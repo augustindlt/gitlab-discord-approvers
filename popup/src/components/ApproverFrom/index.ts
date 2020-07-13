@@ -1,0 +1,1 @@
+export { ApproverFrom as default } from './ApproverFrom.component';

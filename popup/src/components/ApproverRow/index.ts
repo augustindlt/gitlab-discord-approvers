@@ -1,0 +1,1 @@
+export { ApproverRow as default } from './ApproverRow.component';
