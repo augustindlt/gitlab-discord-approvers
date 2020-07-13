@@ -5,7 +5,8 @@
   "scripts": {
     "build:popup": "rm -rf build && cd popup && yarn build && mv build ../build",
     "build:content": "cd content && yarn build",
-    "build:manifest": "cp manifest.json build/manifest.json",
+    "build:manifest": "cp manifest.json build/manifest.json && cp -R icon build/icon",
+    "build:icon": "sh scripts/resize_icon.sh",
     "build": "npm-run-all build:popup build:content build:manifest"
   },
   "author": "Augustin de Latrollière",
