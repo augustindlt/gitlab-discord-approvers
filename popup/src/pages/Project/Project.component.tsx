@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import WebhookDiscord from "../../components/WebhookDiscord";
 import Approvers from "../../components/Approvers";
+import ImportExport from "../../components/ImportExport";
 
 export interface IProps {
   onActivate: (activated: boolean) => void;
@@ -24,7 +25,7 @@ export class Project extends PureComponent<IProps> {
             <input
               id="activate"
               type="checkbox"
-              onChange={e => onActivate(e.target.checked)}
+              onChange={(e) => onActivate(e.target.checked)}
               checked={activated}
               aria-label="Checkbox for following text input"
             />
@@ -38,6 +39,8 @@ export class Project extends PureComponent<IProps> {
             <WebhookDiscord />
             <br />
             <Approvers />
+            <br />
+            <ImportExport />
           </>
         )}
         <br />
