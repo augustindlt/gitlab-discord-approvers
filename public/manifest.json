@@ -1,9 +1,0 @@
-{
-  "name": "Gitlab Discord Approvers",
-  "version": "1.0",
-  "manifest_version": 2,
-  "browser_action": {
-    "default_popup": "index.html"
-  },
-  "content_security_policy": "script-src 'self' 'sha256-CPdIyDpXabN7YMpaxDsqg8130G2TkRMCdrW2Bi3Qcyg='; object-src 'self'"
-}
