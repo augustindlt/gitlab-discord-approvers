@@ -8,3 +8,5 @@ export interface IProject {
 }
 
 export type TProjects = { [projectId: string]: IProject };
+
+export type TProjectsStatus = "loading" | "fetched";

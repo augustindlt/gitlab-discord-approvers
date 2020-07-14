@@ -6,11 +6,24 @@ import ImportExport from "../../components/ImportExport";
 export interface IProps {
   onActivate: (activated: boolean) => void;
   activated?: boolean;
+  loading?: boolean;
 }
 
 export class Project extends PureComponent<IProps> {
   public render() {
-    const { activated, onActivate } = this.props;
+    const { loading, activated, onActivate } = this.props;
+
+    if (loading) {
+      return (
+        <div className="container">
+          <h5 className="text-center mt-3">Gitlab Discord Approvers</h5>
+          <p className="text-center">
+            <i>loading...</i>
+          </p>
+        </div>
+      );
+    }
+
     return (
       <div className="container">
         <h5 className="text-center mt-3">Gitlab Discord Approvers</h5>

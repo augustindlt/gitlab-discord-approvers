@@ -4,7 +4,7 @@ import {
   IWithCurrentProjectProp,
   IWithSetProjectProp,
   withSetProject,
-  withProjects
+  withProjects,
 } from "../../components/withProject";
 import { Project, IProps } from "./Project.component";
 
@@ -29,12 +29,13 @@ export default compose<IProps, {}>(
         this.props.project.activated !== undefined
       )
         this.props.onActivate(this.props.project.activated!);
-    }
+    },
   }),
   withProps((props: IConnectedProps) => ({
     onActivate: (activated: boolean) => {
       props.onActivate(activated);
       props.setProject({ ...props.project, activated });
-    }
+    },
+    loading: props.projectStatus === "loading",
   }))
 )(Project);
